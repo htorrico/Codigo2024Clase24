@@ -15,8 +15,14 @@
         <Button Content="Elevar Cubo" Command="{Binding ElevarPotenciaCommand}" 
                 CommandParameter="3"                
                 Height="30"/>
+        <Button Content="Elevar Cuarta" Command="{Binding ElevarPotenciaCommand}" 
+        CommandParameter="4"                
+        Height="30"/>
+        <Button Content="Elevar Quinta" Command="{Binding ElevarPotenciaCommand}" 
+        CommandParameter="5"                
+        Height="30"/>
         
-        
+
         <TextBlock Text="{Binding ResultadoSuma }" Height="30" />
         <TextBlock Text="{Binding ResultadoResta}" Height="30" />
         <TextBlock Text="{Binding ResultadoCuadrado}" Height="30" />

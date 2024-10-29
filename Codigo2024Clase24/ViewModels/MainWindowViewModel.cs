@@ -60,6 +60,28 @@ namespace Codigo2024Clase24
             }
         }
 
+        private double _ResultadoCuadrado;
+        public double ResultadoCuadrado
+        {
+            get { return _ResultadoCuadrado; }
+            set
+            {
+                _ResultadoCuadrado = value;
+                OnPropertyChanged(nameof(ResultadoCuadrado));
+            }
+        }
+
+
+        private double _ResultadoPotencia;
+        public double ResultadoPotencia
+        {
+            get { return _ResultadoPotencia; }
+            set
+            {
+                _ResultadoPotencia = value;
+                OnPropertyChanged(nameof(ResultadoPotencia));
+            }
+        }
 
 
 
@@ -72,6 +94,10 @@ namespace Codigo2024Clase24
 
         public RelayCommand RestarCommand { get; }
 
+        public RelayCommand ElevarCuadradoCommand { get; }
+
+        public RelayCommand<string> ElevarPotenciaCommand { get; }
+
 
         #endregion
 
@@ -80,7 +106,10 @@ namespace Codigo2024Clase24
         {            
             SumarCommand = new RelayCommand(Sumar);
             RestarCommand = new RelayCommand(Restar);
-            
+            ElevarCuadradoCommand = new RelayCommand(ElevarCuadrado);
+
+            ElevarPotenciaCommand = new RelayCommand<string>((s) => ElevarPotencia(s));
+
         }
 
 
@@ -93,6 +122,16 @@ namespace Codigo2024Clase24
         private void Restar()
         {
             ResultadoResta = Valor1 - Valor2;
+        }
+        private void ElevarCuadrado()
+        {
+            ResultadoCuadrado = Math.Pow(Valor1, 2);
+        }
+
+        private void ElevarPotencia(string potencia)
+        {
+            int potenciaInt = Convert.ToInt32(potencia);
+            ResultadoPotencia = Math.Pow(Valor1, potenciaInt);
         }
 
 

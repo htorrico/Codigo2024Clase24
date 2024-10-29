@@ -11,8 +11,16 @@
         <TextBox  Text="{Binding Valor2}" Margin="0 0 0 5" Height="30"/>
         <Button Content="Sumar"  Command="{Binding SumarCommand}" Height="30"/>
         <Button Content="Restar" Command="{Binding RestarCommand}" Height="30"/>
+        <Button Content="Elevar Cuadrado" Command="{Binding ElevarCuadradoCommand}" Height="30"/>
+        <Button Content="Elevar Cubo" Command="{Binding ElevarPotenciaCommand}" 
+                CommandParameter="3"                
+                Height="30"/>
+        
+        
         <TextBlock Text="{Binding ResultadoSuma }" Height="30" />
         <TextBlock Text="{Binding ResultadoResta}" Height="30" />
+        <TextBlock Text="{Binding ResultadoCuadrado}" Height="30" />
+        <TextBlock Text="{Binding ResultadoPotencia}" Height="30" />
                 
     </StackPanel>
 </Window>

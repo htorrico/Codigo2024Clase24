@@ -19,6 +19,7 @@ namespace Codigo2024Clase24
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new MainWindowViewModel();
         }
     }
 }

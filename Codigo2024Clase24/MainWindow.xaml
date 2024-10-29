@@ -7,10 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel Margin="10">
-        <TextBox Margin="0 0 0 5"   Height="30" />
-        <TextBox  Margin="0 0 0 5" Height="30"/>
-        <Button Content="Sumar" Height="30"/>
-        <TextBlock Text="Resultado" Height="30" />
-        
+        <TextBox Text="{Binding Valor1}"  Margin="0 0 0 5"   Height="30" />
+        <TextBox  Text="{Binding Valor2}" Margin="0 0 0 5" Height="30"/>
+        <Button Content="Sumar"  Command="{Binding SumarCommand}" Height="30"/>
+        <Button Content="Restar" Command="{Binding RestarCommand}" Height="30"/>
+        <TextBlock Text="{Binding ResultadoSuma }" Height="30" />
+        <TextBlock Text="{Binding ResultadoResta}" Height="30" />
+                
     </StackPanel>
 </Window>
